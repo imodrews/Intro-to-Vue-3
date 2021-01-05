@@ -5,15 +5,24 @@
     <title>Vue Mastery</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- Import Vue.js -->
+    <!-- Import Vue.js (to get the latest version of Vue got to installation on their website and copy the cdn link)-->
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
+      <h1>{{ product }}</h1>
+      <p>{{ description }}</p>
+    <!-- Here we add our expression 'product' which refers to our product found in our data property -->
     </div>
 
-    <!-- Import Js -->
+    <!-- Import App -->
     <script src="./main.js"></script>
+    <!-- before we wrote 'import js' but now we are not just importing some javascript, we are importing an entire Vue app -->
+
+    <!-- Mount App  -->
+    <script>
+      const mountedApp = app.mount('#app')
+      // This is to mount the app we just imported above. We then add a DOM selector (#app) to plug the app into a piece of our DOM such as this div with the id of 'app'
+    </script>
   </body>
 </html>
